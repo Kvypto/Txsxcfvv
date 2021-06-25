@@ -1,53 +1,12 @@
-while wait() do
-
-if _G.NetFix == nil then
-    _G.NetFix = " "
-    game:service("RunService").Heartbeat:Connect(function()
-        setsimulationradius(math.huge, math.huge)
-    end)
-end
-
 local ME = game:GetService("Players").LocalPlayer
 local HB = game:GetService("RunService").Heartbeat
-local vel = Vector3.new(18, 5, 8)
+local vel = Vector3.new(7.08782e-06, 6.12542e-08, 8.28769e-06)
+local rotvel = Vector3.new(2, -5, 2)
 for _, v in ipairs(ME.Character:GetDescendants()) do
-    if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+    if v:IsA("BasePart") and v.Name == "Handle" then
         HB:Connect(function()
             v.Velocity = vel
+            v.RotVelocity = rotvel
         end)
     end
 end
-
-local ME = game:GetService("Players").LocalPlayer
-local HB = game:GetService("RunService").Heartbeat
-local vel = Vector3.new(14, 2, 5)
-for _, v in ipairs(ME.Character:GetDescendants()) do
-    if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-        HB:Connect(function()
-            v.Velocity = vel
-        end)
-    end
-end
-
-local ME = game:GetService("Players").LocalPlayer
-local HB = game:GetService("RunService").Heartbeat
-local vel = Vector3.new(12, 2, 1)
-for _, v in ipairs(ME.Character:GetDescendants()) do
-    if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-        HB:Connect(function()
-            v.Velocity = vel
-        end)
-    end
-end
-
-local ME = game:GetService("Players").LocalPlayer
-local HB = game:GetService("RunService").Heartbeat
-local vel = Vector3.new(11, 2, 9)
-for _, v in ipairs(ME.Character:GetDescendants()) do
-    if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-        HB:Connect(function()
-            v.Velocity = vel
-        end)
-    end
-end
-    end
