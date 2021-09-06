@@ -40,11 +40,11 @@ getgenv().Aiming = {
     FOVSides = 12,
     FOVColour = Color3fromRGB(231, 84, 128),
     VisibleCheck = true,
-    FOV = 40,
-    HitChance = 67,
+    FOV = 13,
+    HitChance = 17,
     Selected = LocalPlayer,
     SelectedPart = nil,
-    TargetPart = {"UpperTorso", "HumanoidRootPart"},
+    TargetPart = {"UpperTorso", "Head", "HumanoidRootPart"},
     Ignored = {
         Teams = {
             {
@@ -83,8 +83,8 @@ end
 -- // Custom Functions
 local CalcChance = function(percentage)
     percentage = mathfloor(percentage)
-    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 67) / 67
-    return chance <= percentage / 67
+    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 17) / 17
+    return chance <= percentage / 17
 end
 
 -- // Customisable Checking Functions: Is a part visible
