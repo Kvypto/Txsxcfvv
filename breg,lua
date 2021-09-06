@@ -41,7 +41,7 @@ getgenv().Aiming = {
     FOVColour = Color3fromRGB(231, 84, 128),
     VisibleCheck = true,
     FOV = 40,
-    HitChance = 75,
+    HitChance = 67,
     Selected = LocalPlayer,
     SelectedPart = nil,
     TargetPart = {"UpperTorso", "HumanoidRootPart"},
@@ -83,8 +83,8 @@ end
 -- // Custom Functions
 local CalcChance = function(percentage)
     percentage = mathfloor(percentage)
-    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 100) / 100
-    return chance <= percentage / 100
+    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 67) / 67
+    return chance <= percentage / 67
 end
 
 -- // Customisable Checking Functions: Is a part visible
