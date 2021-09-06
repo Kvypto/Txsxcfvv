@@ -41,10 +41,10 @@ getgenv().Aiming = {
     FOVColour = Color3fromRGB(231, 84, 128),
     VisibleCheck = true,
     FOV = 60,
-    HitChance = 95,
+    HitChance = 75,
     Selected = LocalPlayer,
     SelectedPart = nil,
-    TargetPart = {"Head", "HumanoidRootPart"},
+    TargetPart = {"Head", "UpperTorso", "HumanoidRootPart"},
     Ignored = {
         Teams = {
             {
@@ -414,7 +414,7 @@ return Aiming
 
 --[[
 -- // Load Aiming Module
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/Module.lua"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/breg%2Clua"))()
 
 -- // Hook
 local __namecall
@@ -443,7 +443,7 @@ end)
 
 --[[
 -- // Load Aiming Module
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/Module.lua"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/breg%2Clua"))()
 
 -- // Hook
 local __index
