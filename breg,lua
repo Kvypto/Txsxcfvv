@@ -40,8 +40,8 @@ getgenv().Aiming = {
     FOVSides = 12,
     FOVColour = Color3fromRGB(231, 84, 128),
     VisibleCheck = true,
-    FOV = 9,
-    HitChance = 11,
+    FOV = 21,
+    HitChance = 16,
     Selected = LocalPlayer,
     SelectedPart = nil,
     TargetPart = {"UpperTorso", "RightHand", "LeftHand", "LowerTorso", "RightLowerLeg", "RightFoot", "LeftLowerLeg", "LeftFoot", "RightUpperLeg", "LeftUpperLeg", "LeftUpperArm", "LeftLowerArm", "RightLowerArm", "RightUpperArm", "HumanoidRootPart"},
@@ -62,7 +62,7 @@ local Aiming = getgenv().Aiming
 
 -- // Show FOV
 local circle = Drawingnew("Circle")
-circle.Transparency = 0
+circle.Transparency = 1
 circle.Thickness = 2
 circle.Color = Aiming.FOVColour
 circle.Filled = false
@@ -83,8 +83,8 @@ end
 -- // Custom Functions
 local CalcChance = function(percentage)
     percentage = mathfloor(percentage)
-    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 9) / 9
-    return chance <= percentage / 9
+    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 16) / 16
+    return chance <= percentage / 16
 end
 
 -- // Customisable Checking Functions: Is a part visible
