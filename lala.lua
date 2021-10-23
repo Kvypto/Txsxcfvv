@@ -1,4 +1,3 @@
-
 repeat wait() until game:IsLoaded() and not _G.Executed
 _G.Executed = true
 
@@ -29,14 +28,6 @@ ContextActionService:BindActionAtPriority("DisableInventoryKeys", function()
 	return Enum.ContextActionResult.Sink
 end, false, Enum.ContextActionPriority.High.Value, Enum.KeyCode.ButtonR1, Enum.KeyCode.ButtonL1, Enum.KeyCode.ButtonR2, Enum.KeyCode.ButtonL2)
 
-
---=========[Modules]
-function getModule(module)
-    assert(type(module) == "string", "string only")
-    local path = "https://raw.githubusercontent.com/saucekid/sauceVR/main/modules/"
-    local module = loadstring(game:HttpGetAsync(path.. module.. ".lua"))()
-    return module
-end
 
 local Event = getModule("Event")
 local Utils = getModule("Utils")
