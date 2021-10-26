@@ -1,6 +1,27 @@
 repeat wait() until game:IsLoaded() and not _G.Executed
 _G.Executed = true
 
+local g = game.Players.LocalPlayer.Character:FindFirstChild("METALXLIGHTSEER77Accessory").Handle
+g.AccessoryWeld:Destroy()
+g.Anchored = false
+local sRot = 0.1
+
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+    g.Anchored = true
+    g.Velocity = Vector3.new(0,0,0)
+    g.Anchored = false
+end)
+
+local ME = game:GetService("Players").LocalPlayer
+local HB = game:GetService("RunService").Heartbeat
+local vel = Vector3.new(25, 46, 12)
+for _, v in ipairs(ME.Character:GetDescendants()) do
+    if v:IsA("BasePart") and v.Name == "Handle" then
+        HB:Connect(function()
+            v.Velocity = vel
+        end)
+    end
+end
 
 --=========[Variables]
 local Players = game:GetService("Players");     
@@ -28,6 +49,14 @@ ContextActionService:BindActionAtPriority("DisableInventoryKeys", function()
 	return Enum.ContextActionResult.Sink
 end, false, Enum.ContextActionPriority.High.Value, Enum.KeyCode.ButtonR1, Enum.KeyCode.ButtonL1, Enum.KeyCode.ButtonR2, Enum.KeyCode.ButtonL2)
 
+
+--=========[Modules]
+function getModule(module)
+    assert(type(module) == "string", "string only")
+    local path = "https://raw.githubusercontent.com/saucekid/sauceVR/main/modules/"
+    local module = loadstring(game:HttpGetAsync(path.. module.. ".lua"))()
+    return module
+end
 
 local Event = getModule("Event")
 local Utils = getModule("Utils")
@@ -446,7 +475,19 @@ function StartVR()
             end
         end
     end))
-    
+
+local b = Instance.new("Sound")
+
+b.Name = "Sound"
+b.SoundId = "https://web.roblox.com/asset/?id=3096150128"
+b.Volume = 1
+b.Looped = false
+b.archivable = false
+b.TimePosition = .024
+ 
+b.Parent = game.Players.LocalPlayer.Character.METALXLIGHTSEER77Accessory.Handle
+
+
     --[Death]
     function died()
         for i,v in pairs(Character:GetDescendants()) do
@@ -470,3 +511,10 @@ function StartVR()
 end
 
 StartVR()
+
+while true do wait()
+    if R2down == true and Adown == false and R1down == false then
+        b:Play()
+        wait(.17)
+    end
+end
