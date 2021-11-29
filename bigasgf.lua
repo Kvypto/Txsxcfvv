@@ -38,7 +38,7 @@ getgenv().Aiming = {
     Enabled = true,
 
     ShowFOV = true,
-    FOV = 5.4346,
+    FOV = 3,
     FOVSides = 12,
     FOVColour = Color3fromRGB(231, 84, 128),
 
@@ -98,10 +98,10 @@ local CalcChance = function(percentage)
     percentage = mathfloor(percentage)
 
     -- // Get the chance
-    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 100) / 100
+    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 90) / 90
 
     -- // Return
-    return chance <= percentage / 100
+    return chance <= percentage / 90
 end
 
 -- // Customisable Checking Functions: Is a part visible
