@@ -44,7 +44,7 @@ getgenv().Aiming = {
 
     VisibleCheck = true,
     
-    HitChance = 90,
+    HitChance = 100,
 
     Selected = nil,
     SelectedPart = nil,
@@ -98,10 +98,10 @@ local CalcChance = function(percentage)
     percentage = mathfloor(percentage)
 
     -- // Get the chance
-    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 90) / 90
+    local chance = mathfloor(Randomnew().NextNumber(Randomnew(), 0, 1) * 100) / 100
 
     -- // Return
-    return chance <= percentage / 90
+    return chance <= percentage / 100
 end
 
 -- // Customisable Checking Functions: Is a part visible
