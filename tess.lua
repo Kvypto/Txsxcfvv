@@ -1,18 +1,23 @@
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(15,22,17)
-end)
-end
-end
-
-local ME = game:GetService("Players").LocalPlayer
-local HB = game:GetService("RunService").Heartbeat
-local vel = Vector3.new(25, 30, 10)
-for _, v in ipairs(ME.Character:GetDescendants()) do
-    if v:IsA("BasePart") and v.Name == "Handle" then
-        HB:Connect(function()
-            v.Velocity = vel
-        end)
+-- the key 2 speed is "Q"
+plr = game:GetService('Players').LocalPlayer
+down = true
+ 
+function onButton1Down(mouse)
+    down = true
+    while down do
+        if not down then break end
+        local char = plr.Character
+        char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 190
+        wait()
     end
 end
+ 
+function onButton1Up(mouse)
+    down = false
+end
+ 
+function onSelected(mouse)
+    mouse.KeyDown:connect(function(q) if q:lower()=="q"then onButton1Down(mouse)end end)
+    mouse.KeyUp:connect(function(q) if q:lower()=="q"then onButton1Up(mouse)end end)
+end
+onSelected(game.Players.LocalPlayer:GetMouse())
