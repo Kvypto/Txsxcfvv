@@ -1,3 +1,17 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Games/Da%20Hood/AntiCheatBypass.lua"))()
+wait(1)
+    local localPlayer = game:GetService('Players').LocalPlayer;
+    local localCharacter = localPlayer.Character;
+    localCharacter:FindFirstChildOfClass('Humanoid').Health = 0;
+    local newCharacter = localPlayer.CharacterAdded:Wait();
+    local spoofFolder = Instance.new('Folder');
+    spoofFolder.Name = 'FULLY_LOADED_CHAR';
+    spoofFolder.Parent = newCharacter;
+    newCharacter:WaitForChild('RagdollConstraints'):Destroy();
+    local spoofValue = Instance.new('BoolValue', newCharacter);
+    spoofValue.Name = 'RagdollConstraints';
+wait(2)
+
 getgenv().options = {
     --None, SmoothLocomotion, or teleport (These can be changed in settings)
     DefaultMovementMethod = "SmoothLocomotion",
@@ -137,7 +151,7 @@ LocalPlayer.OnTeleport:Connect(function(State)
         syn.queue_on_teleport([[
             repeat wait() until game:IsLoaded() and game.Players.LocalPlayer.Character
             Wait(1)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/saucekid/sauceVR/main/main.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/DHVR.lua"))()
         ]])
     end
 end)
