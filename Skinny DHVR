@@ -145,7 +145,7 @@ LocalPlayer.OnTeleport:Connect(function(State)
         syn.queue_on_teleport([[
             repeat wait() until game:IsLoaded() and game.Players.LocalPlayer.Character
             Wait(1)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/DHVR.lua"))()
+            loadstring(game:HttpGet("https://github.com/Kvypto/Txsxcfvv/raw/master/Skinny%20DHVR"))()
         ]])
     end
 end)
