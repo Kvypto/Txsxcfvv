@@ -10,7 +10,7 @@ local KeyBindVisualizer = sharedRequire('https://raw.githubusercontent.com/Kvypt
 
 local CoreGui, Players, RunService, TextService, UserInputService, ContentProvider, HttpService, TweenService, GuiService, TeleportService = Services:Get('CoreGui', 'Players', 'RunService', 'TextService', 'UserInputService', 'ContentProvider', 'HttpService', 'TweenService', 'GuiService', 'TeleportService');
 
-local toCamelCase = sharedRequire('utils/toCamelCase.lua');
+local toCamelCase = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/toCamelCase.lua');
 local Maid = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/modules/Cameras/Maid.lua');
 local ToastNotif = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/modules/Cameras/ToastNotif.lua');
 
