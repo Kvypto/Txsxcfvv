@@ -4,15 +4,15 @@ SX_VM_CNONE();
 
 local libraryLoadAt = tick();
 
-local Signal = sharedRequire('utils/Signal.lua');
-local Services = sharedRequire('utils/Services.lua');
-local KeyBindVisualizer = sharedRequire('classes/KeyBindVisualizer.lua');
+local Signal = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/modules/Cameras/Signal.lua');
+local Services = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/modules/Cameras/Services.lua');
+local KeyBindVisualizer = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/KeyBindVisualizer.lua');
 
 local CoreGui, Players, RunService, TextService, UserInputService, ContentProvider, HttpService, TweenService, GuiService, TeleportService = Services:Get('CoreGui', 'Players', 'RunService', 'TextService', 'UserInputService', 'ContentProvider', 'HttpService', 'TweenService', 'GuiService', 'TeleportService');
 
 local toCamelCase = sharedRequire('utils/toCamelCase.lua');
-local Maid = sharedRequire('utils/Maid.lua');
-local ToastNotif = sharedRequire('@classes/ToastNotif.lua');
+local Maid = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/modules/Cameras/Maid.lua');
+local ToastNotif = sharedRequire('https://raw.githubusercontent.com/Kvypto/Txsxcfvv/master/modules/Cameras/ToastNotif.lua');
 
 local LocalPlayer = Players.LocalPlayer;
 local visualizer;
